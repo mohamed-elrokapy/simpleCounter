@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div {
+  display: flex;
+  text-align: center;
+  background-color: gray;
+  height: 30vh;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  font-size: 3em;
+}
+
+span {
+  display: inline-block;
+  padding-bottom: 2em;
+}
+
+div button {
+  font-size: 1.2em;
+  background-color: rgba(16, 31, 168, 0.24);
+  padding: 15px 25px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+div button:hover {
+  background-color: rgba(16, 31, 168, 0.6);
+  transform: scale(1.1);
+}
