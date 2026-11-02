@@ -3,15 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Tally Counter</title>
+    <meta
+      name="description"
+      content="A small tally counter. Add, subtract and reset with buttons or the keyboard."
+    />
+    <meta name="color-scheme" content="dark" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div>
-      <button id="increament">increament</button>
-      <span>0</span>
-      <button id="decreament">decreament</button>
-    </div>
+    <main class="device">
+      <header class="device__head">
+        <h1>Tally counter</h1>
+        <p class="device__hint">
+          Keys: <kbd>+</kbd> add, <kbd>-</kbd> subtract, <kbd>0</kbd> reset
+        </p>
+      </header>
+
+      <section class="display" aria-labelledby="count-label">
+        <h2 id="count-label" class="visually-hidden">Current count</h2>
+        <output
+          id="count"
+          class="display__value"
+          data-state="zero"
+          role="status"
+          aria-live="polite"
+          aria-atomic="true"
+          >0</output
+        >
+      </section>
+
+      <div class="controls" role="group" aria-label="Counter controls">
+        <button type="button" id="decrement" class="btn btn--minus">
+          <span aria-hidden="true" class="btn__sign">&minus;</span>
+          <span class="btn__label">Subtract one</span>
+        </button>
+        <button type="button" id="increment" class="btn btn--plus">
+          <span aria-hidden="true" class="btn__sign">+</span>
+          <span class="btn__label">Add one</span>
+        </button>
+      </div>
+
+      <button type="button" id="reset" class="reset">Reset to zero</button>
+    </main>
 
     <script src="main.js"></script>
   </body>
